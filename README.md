@@ -58,4 +58,4 @@ pod 'ViewModelExtensions'
 ````
 
 [mitLink]: http://opensource.org/licenses/MIT
-[docLink]: http://cocoadocs.org/docsets/ExpandingTableView/1.0/
+[docLink]: http://cocoadocs.org/docsets/ViewModelExtensions/1.0
