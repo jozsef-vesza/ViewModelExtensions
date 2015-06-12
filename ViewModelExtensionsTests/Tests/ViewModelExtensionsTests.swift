@@ -11,7 +11,7 @@ import XCTest
 
 class ViewModelExtensionsTests: XCTestCase {
     
-    func testViewControllerInit() {
+    func instanceFromStoryboardWithName() {
         
         let exampleVM = ExampleViewModel()
         let exampleVC = ExampleViewController.instanceWithViewModel(exampleVM)

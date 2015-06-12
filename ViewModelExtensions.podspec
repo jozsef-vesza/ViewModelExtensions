@@ -10,9 +10,9 @@ Pod::Spec.new do |s|
    s.authors = { 'József Vesza' => 'jozsef.vesza@outlook.com' }
 
    s.source = { :git => 'https://github.com/jozsef-vesza/ViewModelExtensions.git', :tag => s.version }
-   s.source_files = 'ViewModelExtensions/*.swift'
+   s.source_files = '**/*.swift'
 
    s.platform = :ios, '8.0'
-   s.frameworks = 'Foundation'
+   s.frameworks = 'Foundation', 'XCTest'
    s.requires_arc = true
 end
