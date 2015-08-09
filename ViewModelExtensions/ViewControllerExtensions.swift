@@ -45,7 +45,7 @@ public extension UIViewController {
         let storyboardId = NSStringFromClass(self)
         
         if let strippedId = storyboardId.componentsSeparatedByCharactersInSet(NSCharacterSet.punctuationCharacterSet()).last {
-            return UIStoryboard(name: storyboardName, bundle: bundle).instantiateViewControllerWithIdentifier(strippedId) as? UIViewController
+            return UIStoryboard(name: storyboardName, bundle: bundle).instantiateViewControllerWithIdentifier(strippedId)
         }
         
         return nil
