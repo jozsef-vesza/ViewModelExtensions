@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
    s.name = 'ViewModelExtensions'
-   s.version = '1.1'
+   s.version = '1.2'
    s.license = 'MIT'
 
    s.summary = 'A convenience library to inject view models into view controllers defined in Interface Builder.'
