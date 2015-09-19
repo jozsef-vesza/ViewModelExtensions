@@ -23,7 +23,7 @@ extension ExampleViewController: ViewControllerInitializable {
     
     static func instanceWithViewModel(viewModel: ExampleViewModel) -> ExampleViewController? {
         
-        if let instance = self.instanceFromStoryboardWithName(storyboardName: "Test", fromBundle: NSBundle(forClass: self)) as? ExampleViewController {
+        if let instance = self.instanceFromStoryboardWithName("Test", fromBundle: NSBundle(forClass: self)) as? ExampleViewController {
             
             instance.viewModel = viewModel
             

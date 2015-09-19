@@ -19,9 +19,9 @@ public protocol ViewControllerInitializable {
     
     /// Serves as an initializer for view controllers.
     ///
-    /// :param: viewModel A view model instance for the view controller.
+    /// - parameter viewModel: A view model instance for the view controller.
     ///
-    /// :returns: A view controller instance configured with the correct view model.
+    /// - returns: A view controller instance configured with the correct view model.
     static func instanceWithViewModel(viewModel: U) -> T?
 }
 
@@ -30,22 +30,22 @@ public extension UIViewController {
     /// Instantiate a view controller from the default storyboard.
     /// Requires "Main.storyboard" to be present.
     ///
-    /// :returns: a view controller instance loaded from default storyboard.
+    /// - returns: a view controller instance loaded from default storyboard.
     public class func instance() -> UIViewController? {
         return self.instanceFromStoryboardWithName()
     }
     
     /// Instantiate a view controller from a given storyboard.
     ///
-    /// :param: storyboardName The name of the storyboard file (defaults to "Main")
-    /// :param: fromBundle The bundle to use (defaults to `nil`)
+    /// - parameter storyboardName: The name of the storyboard file (defaults to "Main")
+    /// - parameter fromBundle: The bundle to use (defaults to `nil`)
     ///
-    /// :returns: a view controller instance loaded from the provided storyboard file.
+    /// - returns: a view controller instance loaded from the provided storyboard file.
     public class func instanceFromStoryboardWithName(storyboardName: String = "Main", fromBundle bundle: NSBundle? = nil) -> UIViewController? {
         let storyboardId = NSStringFromClass(self)
         
         if let strippedId = storyboardId.componentsSeparatedByCharactersInSet(NSCharacterSet.punctuationCharacterSet()).last {
-            return UIStoryboard(name: storyboardName, bundle: bundle).instantiateViewControllerWithIdentifier(strippedId) as? UIViewController
+            return UIStoryboard(name: storyboardName, bundle: bundle).instantiateViewControllerWithIdentifier(strippedId)
         }
         
         return nil
